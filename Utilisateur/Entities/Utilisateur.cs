@@ -9,6 +9,8 @@ namespace utilisateur.Entities
         public string Email { get; set; }
         public string Pass { get; private set; }
         public string NomComplet => Nom + " " + Prenom;
+
+        public int nombrePokemon;
         // Constructeur
         public Utilisateur(int id, string nom, string prenom, string email, string pass)
         {
@@ -17,6 +19,7 @@ namespace utilisateur.Entities
             Nom = nom;
             Email = email;
             Pass = pass;
+            nombrePokemon = 0;
         }
         public void changePass()
         {
